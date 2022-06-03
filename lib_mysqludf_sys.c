@@ -55,7 +55,7 @@ extern "C" {
 #define LIBVERSION "lib_mysqludf_sys version 0.0.3"
 
 #ifdef __WIN__
-#define SETENV(name,value)		SetEnvironmentVariable(name,value);
+#define SETENV(name,value)		putenv(name,value);
 #else
 #define SETENV(name,value)		setenv(name,value,1);		
 #endif
